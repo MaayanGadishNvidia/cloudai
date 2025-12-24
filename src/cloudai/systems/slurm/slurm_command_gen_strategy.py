@@ -372,7 +372,7 @@ class SlurmCommandGenStrategy(CommandGenStrategy):
         hostfile = self._append_nodes_related_directives(batch_script_content)
 
         if self.system.gpus_per_node and self.system.supports_gpu_directives:
-            batch_script_content.append(f"#SBATCH --gpus-per-node={self.system.gpus_per_node}")
+            # batch_script_content.append(f"#SBATCH --gpus-per-node={self.system.gpus_per_node}")
             batch_script_content.append(f"#SBATCH --gres=gpu:{self.system.gpus_per_node}")
 
         if self.system.ntasks_per_node:
