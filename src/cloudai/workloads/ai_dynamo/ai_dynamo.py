@@ -85,7 +85,7 @@ class AIDynamoTestDefinition(TestDefinition):
     _docker_image: Optional[DockerImage] = None
     script: File = File(Path(__file__).parent.parent / "ai_dynamo/ai_dynamo.sh")
     dynamo_repo: GitRepo = GitRepo(
-        url="https://github.com/ai-dynamo/dynamo.git", commit="f7e468c7e8ff0d1426db987564e60572167e8464"
+        url="https://github.com/ai-dynamo/dynamo.git", commit="602ce0ed60f0ad9970745e07f7859fa375db51d9"
     )
     genai_perf_repo: GitRepo = GitRepo(
         url="https://github.com/triton-inference-server/perf_analyzer.git",
